@@ -6,8 +6,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "c:/Users/Martin/Documents/PlatformIO/Projects/201229-001003-arduino-blink/include",
-                "c:/Users/Martin/Documents/PlatformIO/Projects/201229-001003-arduino-blink/src",
+                "c:/Users/Martin/Documents/GitHub/threePhaseSTM/fw/include",
+                "c:/Users/Martin/Documents/GitHub/threePhaseSTM/fw/src",
                 "C:/Users/Martin/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                 "C:/Users/Martin/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
                 "C:/Users/Martin/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
@@ -46,8 +46,8 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "c:/Users/Martin/Documents/PlatformIO/Projects/201229-001003-arduino-blink/include",
-                    "c:/Users/Martin/Documents/PlatformIO/Projects/201229-001003-arduino-blink/src",
+                    "c:/Users/Martin/Documents/GitHub/threePhaseSTM/fw/include",
+                    "c:/Users/Martin/Documents/GitHub/threePhaseSTM/fw/src",
                     "C:/Users/Martin/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                     "C:/Users/Martin/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
                     "C:/Users/Martin/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
