@@ -12,13 +12,12 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "c:/Users/Martin/Documents/GitHub/threePhaseSTM/fw/.pio/build/bluepill_f103c8/firmware.elf",
-            "projectEnvName": "bluepill_f103c8",
-            "toolchainBinDir": "C:/Users/Martin/.platformio/packages/toolchain-gccarmnoneeabi/bin",
-            "svdPath": "C:/Users/Martin/.platformio/platforms/ststm32/misc/svd/STM32F103xx.svd",
+            "executable": "c:/Users/Martin/Documents/GitHub/threePhaseSTM/fw/.pio/build/nanoatmega328/firmware.elf",
+            "projectEnvName": "nanoatmega328",
+            "toolchainBinDir": "C:/Users/Martin/.platformio/packages/toolchain-atmelavr/bin",
             "preLaunchTask": {
                 "type": "PlatformIO",
-                "task": "Pre-Debug (bluepill_f103c8)"
+                "task": "Pre-Debug (nanoatmega328)"
             },
             "internalConsoleOptions": "openOnSessionStart"
         },
@@ -26,10 +25,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "c:/Users/Martin/Documents/GitHub/threePhaseSTM/fw/.pio/build/bluepill_f103c8/firmware.elf",
-            "projectEnvName": "bluepill_f103c8",
-            "toolchainBinDir": "C:/Users/Martin/.platformio/packages/toolchain-gccarmnoneeabi/bin",
-            "svdPath": "C:/Users/Martin/.platformio/platforms/ststm32/misc/svd/STM32F103xx.svd",
+            "executable": "c:/Users/Martin/Documents/GitHub/threePhaseSTM/fw/.pio/build/nanoatmega328/firmware.elf",
+            "projectEnvName": "nanoatmega328",
+            "toolchainBinDir": "C:/Users/Martin/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]
