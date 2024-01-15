@@ -12,12 +12,12 @@ void setup()
   pinMode(13, OUTPUT);  //TRIG vystup pro oscilo
  }
 
-int pwm_ph0H=0;
-int pwm_ph1H=0;
-int pwm_ph2H=0;
-int pwm_ph0L=0;
-int pwm_ph1L=0;
-int pwm_ph2L=0;
+uint8_t pwm_ph0H=0;
+uint8_t pwm_ph1H=0;
+uint8_t pwm_ph2H=0;
+uint8_t pwm_ph0L=0;
+uint8_t pwm_ph1L=0;
+uint8_t pwm_ph2L=0;
 
 int x0H=0;
 int x1H=0;
@@ -29,12 +29,12 @@ int x2L=0;
 int x=1;
 int pwm=0;
 
-int sinPWM[]={0 ,16 ,32 ,48 ,64 ,79 ,94 ,109 ,123 ,137 ,150 ,163 ,175 ,187 ,197 ,207 ,216 ,224 ,232 ,238 ,243 ,248 ,251 ,254 ,255 ,256 ,
-255 ,254 ,251 ,248 ,243 ,238 ,232 ,224 ,216 ,207 ,197 ,187 ,175 ,163 ,150 ,137 ,123 ,109 ,94 ,79 ,64 ,48 ,32 ,16 ,
+uint8_t sinPWM[]={0,2,6,12,20,29,40,53,66,81,96,112,128,143,159,174,189,202,215,226,235,243,249,253,255,255,253,249,243,235,226,215,202,189,174,159,143,
+128,112,96,81,66,53,40,29,20,12,6,2,0,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,16 ,32 ,48 ,64 ,79 ,94 ,109 ,123 ,137 ,150 ,163 ,175 ,187 ,197 ,207 ,216 ,224 ,232 ,238 ,243 ,248 ,251 ,254 ,255 ,256 ,
-255 ,254 ,251 ,248 ,243 ,238 ,232 ,224 ,216 ,207 ,197 ,187 ,175 ,163 ,150 ,137 ,123 ,109 ,94 ,79 ,64 ,48 ,32 ,16 ,
+0,2,6,12,20,29,40,53,66,81,96,112,128,143,159,174,189,202,215,226,235,243,249,253,255,255,253,249,243,235,226,215,202,189,174,159,143,
+128,112,96,81,66,53,40,29,20,12,6,2,0,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0};
 
@@ -46,19 +46,19 @@ void update_pwm(void)
  {
  }
  //Now it's safe to update OCR0x pair (connect to same transistor pair)
-  OCR0A = (pwm_ph0L);//~6 TL PH0 TMR0
+  OCR0A = (~pwm_ph0L);//~6 TL PH0 TMR0
   OCR0B = (pwm_ph0H);//~5 TH PH0 TMR0
  while(TCNT1 > 0x7F)
  {
  }
  //Now it's safe to update OCR1x pair (connect to same transistor pair)
-  OCR1A = (pwm_ph1L);//~9 TL PH1 TMR1
+  OCR1A = (~pwm_ph1L);//~9 TL PH1 TMR1
   OCR1B = (pwm_ph1H);//~10 TH PH1 TMR1
  while(TCNT2 > 0x7F)
  {
  }
  //Now it's safe to update OCR2x pair (connect to same transistor pair)
-  OCR2A = (pwm_ph2H);//~3 TH PH2 TMR2
+  OCR2A = (~pwm_ph2H);//~3 TH PH2 TMR2
   OCR2B = (pwm_ph2L);//~11 TL PH2 TMR2
 }
 
